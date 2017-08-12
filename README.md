@@ -1,3 +1,3 @@
 # TicTacToe
 
-OOP tic tac toe for The Odin Project
+OOP tic tac toe
