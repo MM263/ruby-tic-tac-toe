@@ -12,7 +12,7 @@ module TicTacToe
     end
 
     def solicit_move
-      "#{current_player.name}: Enter a number between 1 and 9 to place a mark"
+      "#{current_player.name}, enter a number between 1 and 9 to place a mark"
     end
 
     def valid_move?(move)
@@ -22,10 +22,6 @@ module TicTacToe
         return false
       end
       true
-    end
-
-    def valid_moves
-      ['1', '2', '3', '4', '5', '6', '7', '8', '9']
     end
 
     def get_move(human_move = gets.chomp)
@@ -68,7 +64,11 @@ module TicTacToe
       end
     end
 
-    private #!!!!!!!!!!!!!!!!!!!!!!!!!
+    private
+
+    def valid_moves
+      ['1', '2', '3', '4', '5', '6', '7', '8', '9']
+    end
 
     def draw?
       board.grid.flatten.map { |cell| cell.value  }.none_empty?
